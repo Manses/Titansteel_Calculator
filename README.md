@@ -18,6 +18,8 @@ You must have alchemy proffession because this program will calculate your profi
 ### output : 
 You can see how the output of this program is from the input and output examples given below :
 
+
+
 ### input1.txt
 ```
 17248 82 74
