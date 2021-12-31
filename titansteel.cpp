@@ -212,22 +212,22 @@ int main() {
   bool bmoney = 0;
   while (!bmoney) {
     SetColor(8);
-  	cout << "======================================================" << endl;
-		SetColor(7);
-  	double money;
-  	input_money(money, "Money available");
-  	if (quit) {
-    	return 0;
-  	}
-  	double money2 = money;
-  	double SellSaroniteBar;
-  	input_money(SellSaroniteBar, "Saronite bar selling price");
-  	if (quit) {
-  	  return 0;
-  	}
-  	double SaroniteBar;
-  	input_money(SaroniteBar, "Saronite bar buying price");
-  	if (quit) {
+    cout << "======================================================" << endl;
+    SetColor(7);
+    double money;
+    input_money(money, "Money available");
+    if (quit) {
+      return 0;
+    }
+    double money2 = money;
+    double SellSaroniteBar;
+    input_money(SellSaroniteBar, "Saronite bar selling price");
+    if (quit) {
+      return 0;
+    }
+     double SaroniteBar;
+     input_money(SaroniteBar, "Saronite bar buying price");
+     if (quit) {
   	  return 0;
   	}
   	cout << "Number of saronite bar : ";
