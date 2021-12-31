@@ -1,11 +1,11 @@
 # Titansteel_Calculator
-Hi 2022, anyway this C++ program lets you to know wheter the sale of your titansteel bar in World of Warcraft: Wrath of the Lich King game is profit or no.
-You must have alchemy proffession because this program will calculate your profit (in this case, you don't get profit from selling titansteel bar (your sales result - capital  < 0)) based on your how many bonus you get from Transmute: Titanium.
+Hi 2022, anyway this C++ program allows you to find out wheter the sales of your titansteel bar in World of Warcraft: Wrath of the Lich King game is profit or no.
+You must have alchemy proffession because this program will calculate your profit (in this case, you don't get profit from selling titansteel bar (sales result - capital  < 0)) based on your how many bonus you get from Transmute: Titanium.
 
 
 
 # Input and Output
-#### input :
+### input :
 - Money available :
 - Saronite bar selling price :
 - Saronite bar buying price :
@@ -15,11 +15,10 @@ You must have alchemy proffession because this program will calculate your profi
 - Eternal Shadow buying price :
 - TitansteelBar selling price :
 - Titanium bar selling price :
+### output : 
+You can see how the output of this program is from the input and output examples given below :
 
-#### output : 
-You can see how the output of this program from given example input and output below
-
-#### input1.txt
+### input1.txt
 ```
 17248 82 74
 9 20 0
