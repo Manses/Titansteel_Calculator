@@ -88,7 +88,6 @@ Comparing both outcome (Titanium : Titansteel) :
 -(623g 07s 00c) : -(486g 67s 50c)
 Looks like selling TITANSTEEL BARS is the best choice
 ======================================================
-
 ```
 
 #### input2.txt
