@@ -19,7 +19,7 @@ You can see how the output of this program is from the input and output examples
 
 
 
-### input1.txt
+#### input1.txt
 ```
 17248 82 74
 10 0 0
