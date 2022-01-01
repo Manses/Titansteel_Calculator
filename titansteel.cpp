@@ -513,47 +513,47 @@ int main() {
           cout << "Your 'must have chance' low" << "\n";
         }
       } else {
-          SetColor(10);
-          cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
-          SetColor(7);
-       }
-     } else if (!ProfitTitanium && !SameTitanium && !ProfitTitansteel && SameTitansteel) {
-       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-       cout << "-(";
-       converter2(loss2);
-       cout << ") : " << "0g" << "\n";
-       SetColor(10);
-       cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
-       SetColor(7);
+        SetColor(10);
+        cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
+        SetColor(7);
+      }
+    } else if (!ProfitTitanium && !SameTitanium && !ProfitTitansteel && SameTitansteel) {
+      cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
+      cout << "-(";
+      converter2(loss2);
+      cout << ") : " << "0g" << "\n";
+      SetColor(10);
+      cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
+      SetColor(7);
 //-------------------------------------------------------------------------------------------------------------------
-     } else if (!ProfitTitanium && SameTitanium && ProfitTitansteel && !SameTitansteel) {
-       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-       cout << "0g" << " : ";
-       converter2(profit);
-       cout << "\n";
-       SetColor(10);
-       cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
-       SetColor(7);
-     } else if (!ProfitTitanium && SameTitanium && !ProfitTitansteel && !SameTitansteel) {
-       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-       cout << "0g" << " : -(";
-       converter2(loss);
-       cout << ")\n";
-       SetColor(10);
-       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
-       SetColor(7);
-       cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
+    } else if (!ProfitTitanium && SameTitanium && ProfitTitansteel && !SameTitansteel) {
+      cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
+      cout << "0g" << " : ";
+      converter2(profit);
+      cout << "\n";
+      SetColor(10);
+      cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
+      SetColor(7);
+    } else if (!ProfitTitanium && SameTitanium && !ProfitTitansteel && !SameTitansteel) {
+      cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
+      cout << "0g" << " : -(";
+      converter2(loss);
+      cout << ")\n";
+      SetColor(10);
+      cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
+      SetColor(7);
+      cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
     } else if (!ProfitTitanium && SameTitanium && !ProfitTitansteel && SameTitansteel) {
-       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-       cout << 0 << "g : " << 0 << "g" << "\n";
-       SetColor(10);
-       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
-       SetColor(7);
-       cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
+      cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
+      cout << 0 << "g : " << 0 << "g" << "\n";
+      SetColor(10);
+      cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
+      SetColor(7);
+      cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
     }
     SetColor(8);
     cout << "======================================================" << endl;
     SetColor(7);				  
-    }
-    return 0;
+  }
+  return 0;
 }
