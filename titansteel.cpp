@@ -300,6 +300,16 @@ int main() {
     converter2(EternalShadow);
     cout << "\n";
     cout << "\n";
+    cout << "Saronite bar selling price : ";
+    converter2(SellSaroniteBar);
+    cout << "\n";
+    cout << "Titanium bar selling price : ";
+    converter2(SellTitaniumBar);
+    cout << "\n";
+    cout << "Titansteel bar selling price : ";
+    converter2(SellTitansteelBar);
+    cout << "\n";
+    cout << "\n";
     cout << "Number of saronite bar : " << NumOfSaronite << "\n";
     cout << "Unused saronite bar : " << UnusedSaronite << "\n";
     cout << "Used saronite bar : " << UsedSaronite << "\n";
