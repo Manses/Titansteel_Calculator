@@ -44,6 +44,10 @@ Eternal fire buying price : 118g 50s 00c
 Eternal earth buying price : 6g 00s 00c
 Eternal Shadow buying price : 42g 00s 00c
 
+Saronite bar selling price : 9g 20s 00c
+Titanium bar selling price : 73g 80s 00c
+Titansteel bar selling price : 403g 50s 00c
+
 Number of saronite bar : 509
 Unused saronite bar : 5
 Used saronite bar : 504
@@ -110,6 +114,10 @@ Eternal fire buying price : 115g 50s 00c
 Eternal earth buying price : 7g 00s 00c
 Eternal Shadow buying price : 43g 00s 00c
 
+Saronite bar selling price : 9g 30s 00c
+Titanium bar selling price : 100g 80s 00c
+Titansteel bar selling price : 450g 50s 00c
+
 Number of saronite bar : 808
 Unused saronite bar : 16
 Used saronite bar : 792
@@ -144,4 +152,5 @@ Comparing both outcome (Titanium : Titansteel) :
 2482g 92s 00c : 345g 67s 50c
 Looks like selling only TITANIUM BARS is the best choice
 ======================================================
+
 ```
