@@ -220,11 +220,6 @@ int main() {
       return 0;
     }
     double money2 = money;
-    double SellSaroniteBar;
-    input_money(SellSaroniteBar, "Saronite bar selling price");
-    if (quit) {
-      return 0;
-    }
     double SaroniteBar;
     input_money(SaroniteBar, "Saronite bar buying price");
     if (quit) {
@@ -246,6 +241,8 @@ int main() {
     SetColor(10);
     cout << NumOfTitanium << " titanium bars, " << NumOfEternals << " eternal fire, " << NumOfEternals;
     cout << " eternal earth, " << NumOfEternals << " eternal shadow" << endl;
+    SetColor(14);
+    cout << "Used Saronite bar : " << UsedSaronite << endl;
     SetColor(12);
     cout << "Unused saronite bar : " << UnusedSaronite << endl;
     SetColor(6);
@@ -299,9 +296,6 @@ int main() {
     cout << "Eternal Shadow buying price : ";
     converter2(EternalShadow);
     cout << "\n";
-    cout << "\n";
-    cout << "Saronite bar selling price : ";
-    converter2(SellSaroniteBar);
     cout << "\n";
     cout << "Titanium bar selling price : ";
     converter2(SellTitaniumBar);
@@ -382,17 +376,17 @@ int main() {
     SetColor(7);
     double OutcomeEachTitanium = SellTitaniumBar * 0.95;
     double OutcomeTitanium = (NumOfTitanium*SellTitaniumBar) * 0.95;
-    double OutcomeSaronite = (UsedSaronite*SellSaroniteBar) * 0.95;
+    double CapitalSaronite = UsedSaronite * SaroniteBar;
     bool ProfitTitanium = 0;
     bool SameTitanium = 0;
     double profit2, loss2;
     int TitaniumBonus2;
     double dTitaniumBonus2, dNumOfTitanium2, chance2;
-    if (OutcomeTitanium > OutcomeSaronite) {
+    if (OutcomeTitanium > CapitalSaronite) {
       ProfitTitanium = 1;
-      profit2 = OutcomeTitanium - OutcomeSaronite;
-    } else if (OutcomeSaronite > OutcomeTitanium) {
-       loss2 = OutcomeSaronite - OutcomeTitanium;
+      profit2 = OutcomeTitanium - CapitalSaronite;
+    } else if (CapitalSaronite > OutcomeTitanium) {
+       loss2 = CapitalSaronite - OutcomeTitanium;
        TitaniumBonus2 = (loss2/OutcomeEachTitanium) + 1;
        dTitaniumBonus2 = TitaniumBonus2;
        dNumOfTitanium2 = NumOfTitanium;
@@ -404,20 +398,20 @@ int main() {
     bool SameTitansteel = 0;
     double profit, loss;
     if (money2 > money) {
-    ProfitTitansteel = 1;
-    SetColor(10);
-    cout << "PROFIT!" << "\n";
-    SetColor(7);
-    profit = money2 - money;
-    cout << "Your profit = ";
-    converter2(profit);
-    cout << "\n";
+      ProfitTitansteel = 1;
+      SetColor(10);
+      cout << "PROFIT!" << "\n";
+      SetColor(7);
+      profit = money2 - money;
+      cout << "Your profit = +";
+      converter2(profit);
+      cout << "\n";
     } else if (money > money2) {
       SetColor(14);
       cout << "NO PROFIT!" << "\n";
       SetColor(7);
       loss = money - money2;
-      cout << "Your loss : ";
+      cout << "Your loss : -";
       converter2(loss);
       cout << "\n";
       cout << "Outcome 1 titanium bar sales (-cuts) : ";
