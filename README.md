@@ -7,7 +7,6 @@ You must have alchemy proffession because this program will calculate your profi
 # Input and Output
 ### input :
 - Money available :
-- Saronite bar selling price :
 - Saronite bar buying price :
 - Number of saronite bar :
 - Eternal fire buying price :
@@ -23,7 +22,6 @@ You can see how the output of this program is from the input and output examples
 ### input1.txt
 ```
 17248 82 74
-9 20 0
 10 0 0
 509
 118 50 0
@@ -34,9 +32,12 @@ You can see how the output of this program is from the input and output examples
 ```
 #### output1.txt
 ```
+------------------------------------------------------
 You will making 21 titansteel bars with :
 63 titanium bars, 21 eternal fire, 21 eternal earth, 21 eternal shadow
+Used Saronite bar : 504
 Unused saronite bar : 5
+------------------------------------------------------
 ======================================================
 Money available : 17248g 82s 74c
 Saronite bar buying price : 10g 00s 00c
@@ -44,7 +45,6 @@ Eternal fire buying price : 118g 50s 00c
 Eternal earth buying price : 6g 00s 00c
 Eternal Shadow buying price : 42g 00s 00c
 
-Saronite bar selling price : 9g 20s 00c
 Titanium bar selling price : 73g 80s 00c
 Titansteel bar selling price : 403g 50s 00c
 
@@ -73,7 +73,7 @@ Your money : 16762g 15s 24c
 
 ======================================================
 NO PROFIT!
-Your loss : 486g 67s 50c
+Your loss : -486g 67s 50c
 Outcome 1 titanium bar sales (-cuts) : 70g 11s 00c
 Your loss can be eliminated if and only if you got bonus +7 titanium bars
 from your 'Transmute: Titanium' which the chance getting that much bars
@@ -85,15 +85,15 @@ FINAL CONCLUSION : PROFIT!
 ======================================================
 Comparing only selling titanium bars and selling titansteel bars : 
 Comparing both outcome (Titanium : Titansteel) : 
-11g 97s 00c : -(486g 67s 50c)
-Looks like selling only TITANIUM BARS is the best choice
+-(623g 07s 00c) : -(486g 67s 50c)
+Looks like selling TITANSTEEL BARS is the best choice
 ======================================================
+
 ```
 
 #### input2.txt
 ```
 17248 82 74
-9 30 0
 10 50 0
 808
 115 50 0
@@ -104,9 +104,12 @@ Looks like selling only TITANIUM BARS is the best choice
 ```
 #### output2.txt
 ```
+------------------------------------------------------
 You will making 33 titansteel bars with :
 99 titanium bars, 33 eternal fire, 33 eternal earth, 33 eternal shadow
+Used Saronite bar : 792
 Unused saronite bar : 16
+------------------------------------------------------
 ======================================================
 Money available : 17248g 82s 74c
 Saronite bar buying price : 10g 50s 00c
@@ -114,7 +117,6 @@ Eternal fire buying price : 115g 50s 00c
 Eternal earth buying price : 7g 00s 00c
 Eternal Shadow buying price : 43g 00s 00c
 
-Saronite bar selling price : 9g 30s 00c
 Titanium bar selling price : 100g 80s 00c
 Titansteel bar selling price : 450g 50s 00c
 
@@ -143,14 +145,13 @@ Your money : 17594g 50s 24c
 
 ======================================================
 PROFIT!
-Your profit = 345g 67s 50c
+Your profit = +345g 67s 50c
 ======================================================
 
 ======================================================
 Comparing only selling titanium bars and selling titansteel bars : 
 Comparing both outcome (Titanium : Titansteel) : 
-2482g 92s 00c : 345g 67s 50c
+1164g 24s 00c : 345g 67s 50c
 Looks like selling only TITANIUM BARS is the best choice
 ======================================================
-
 ```
