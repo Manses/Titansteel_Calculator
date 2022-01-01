@@ -384,11 +384,9 @@ int main() {
     int TitaniumBonus2;
     double dTitaniumBonus2, dNumOfTitanium2, chance2;
     if (OutcomeTitanium > CapitalSaronite) {
-      cout << 1 << endl;
       ProfitTitanium = 1;
       profit2 = OutcomeTitanium - CapitalSaronite;
     } else if (CapitalSaronite > OutcomeTitanium) {
-      cout << 2 << endl;
       LossTitanium = 1;
       loss2 = CapitalSaronite - OutcomeTitanium;
       TitaniumBonus2 = (loss2/OutcomeEachTitanium) + 1;
@@ -396,7 +394,6 @@ int main() {
       dNumOfTitanium2 = NumOfTitanium;
       chance2 = (dTitaniumBonus2/dNumOfTitanium2)*100;
     } else {
-      cout << 3 << endl;
       SameTitanium = 1;
     }
     bool ProfitTitansteel = 0;
@@ -404,7 +401,6 @@ int main() {
     bool SameTitansteel = 0;
     double profit, loss;
     if (money2 > money) {
-      cout << 11 << endl;
       ProfitTitansteel = 1;
       SetColor(10);
       cout << "PROFIT!" << "\n";
@@ -414,7 +410,6 @@ int main() {
       converter2(profit);
       cout << "\n";
     } else if (money > money2) {
-      cout << 22 << endl;
       LossTitansteel = 1;
       SetColor(14);
       cout << "NO PROFIT!" << "\n";
@@ -445,7 +440,6 @@ int main() {
         SetColor(7);
       }
     } else {
-      cout << 33 << endl;
       SameTitansteel = 1;
       cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
       SetColor(10);
