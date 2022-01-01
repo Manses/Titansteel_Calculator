@@ -378,26 +378,33 @@ int main() {
     double OutcomeTitanium = (NumOfTitanium*SellTitaniumBar) * 0.95;
     double CapitalSaronite = UsedSaronite * SaroniteBar;
     bool ProfitTitanium = 0;
+    bool LossTitanium = 0;
     bool SameTitanium = 0;
     double profit2, loss2;
     int TitaniumBonus2;
     double dTitaniumBonus2, dNumOfTitanium2, chance2;
     if (OutcomeTitanium > CapitalSaronite) {
+      cout << 1 << endl;
       ProfitTitanium = 1;
       profit2 = OutcomeTitanium - CapitalSaronite;
     } else if (CapitalSaronite > OutcomeTitanium) {
-       loss2 = CapitalSaronite - OutcomeTitanium;
-       TitaniumBonus2 = (loss2/OutcomeEachTitanium) + 1;
-       dTitaniumBonus2 = TitaniumBonus2;
-       dNumOfTitanium2 = NumOfTitanium;
-       chance2 = (dTitaniumBonus2/dNumOfTitanium2)*100;
+      cout << 2 << endl;
+      LossTitanium = 1;
+      loss2 = CapitalSaronite - OutcomeTitanium;
+      TitaniumBonus2 = (loss2/OutcomeEachTitanium) + 1;
+      dTitaniumBonus2 = TitaniumBonus2;
+      dNumOfTitanium2 = NumOfTitanium;
+      chance2 = (dTitaniumBonus2/dNumOfTitanium2)*100;
     } else {
-      SameTitanium = 0;
+      cout << 3 << endl;
+      SameTitanium = 1;
     }
     bool ProfitTitansteel = 0;
+    bool LossTitansteel = 0;
     bool SameTitansteel = 0;
     double profit, loss;
     if (money2 > money) {
+      cout << 11 << endl;
       ProfitTitansteel = 1;
       SetColor(10);
       cout << "PROFIT!" << "\n";
@@ -407,6 +414,8 @@ int main() {
       converter2(profit);
       cout << "\n";
     } else if (money > money2) {
+      cout << 22 << endl;
+      LossTitansteel = 1;
       SetColor(14);
       cout << "NO PROFIT!" << "\n";
       SetColor(7);
@@ -436,6 +445,7 @@ int main() {
         SetColor(7);
       }
     } else {
+      cout << 33 << endl;
       SameTitansteel = 1;
       cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
       SetColor(10);
@@ -451,7 +461,7 @@ int main() {
     cout << "======================================================" << endl;
     SetColor(7);
     cout << "Comparing only selling titanium bars and selling titansteel bars : " << "\n";
-    if (ProfitTitanium && !SameTitanium && ProfitTitansteel && !SameTitansteel) {
+    if (ProfitTitanium && ProfitTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
       converter2(profit2);
       cout << " : ";
@@ -466,7 +476,7 @@ int main() {
         cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
         SetColor(7);
       }
-    } else if (ProfitTitanium && !SameTitanium && !ProfitTitansteel && !SameTitansteel) {
+    } else if (ProfitTitanium && LossTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n"; 
       converter2(profit2);
       cout << " : -(";
@@ -475,15 +485,15 @@ int main() {
       SetColor(10);
       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
       SetColor(7);
-    } else if (ProfitTitanium && !SameTitanium && !ProfitTitansteel && SameTitansteel) {
+    } else if (ProfitTitanium && SameTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
       converter2(profit2);
-      cout << " : " << "0g" << "\n";
+      cout << " : " << "0g 00s 00c" << "\n";
       SetColor(10);
       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
       SetColor(7);
 //-----------------------------------------------------------------------------------------------------------------
-    } else if (!ProfitTitanium && !SameTitanium && ProfitTitansteel && !SameTitansteel) {
+    } else if (LossTitanium && ProfitTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
       cout << "-(";
       converter2(loss2);
@@ -493,7 +503,7 @@ int main() {
       SetColor(10);
       cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
       SetColor(7);
-    } else if (!ProfitTitanium && !SameTitanium && !ProfitTitansteel && !SameTitansteel) {
+    } else if (LossTitanium && LossTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
       cout << "-(";
       converter2(loss2);
@@ -517,35 +527,35 @@ int main() {
         cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
         SetColor(7);
       }
-    } else if (!ProfitTitanium && !SameTitanium && !ProfitTitansteel && SameTitansteel) {
+    } else if (LossTitanium && SameTitanium) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
       cout << "-(";
       converter2(loss2);
-      cout << ") : " << "0g" << "\n";
+      cout << ") : " << "0g 00s 00c" << "\n";
       SetColor(10);
       cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
       SetColor(7);
 //-------------------------------------------------------------------------------------------------------------------
-    } else if (!ProfitTitanium && SameTitanium && ProfitTitansteel && !SameTitansteel) {
+    } else if (SameTitanium && ProfitTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-      cout << "0g" << " : ";
+      cout << "0g 00s 00c" << " : ";
       converter2(profit);
       cout << "\n";
       SetColor(10);
       cout << "Looks like selling TITANSTEEL BARS is the best choice" << "\n";
       SetColor(7);
-    } else if (!ProfitTitanium && SameTitanium && !ProfitTitansteel && !SameTitansteel) {
+    } else if (SameTitanium && LossTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-      cout << "0g" << " : -(";
+      cout << "0g 00s 00c" << " : -(";
       converter2(loss);
       cout << ")\n";
       SetColor(10);
       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
       SetColor(7);
       cout << "You got no profit, but you can rely on your 'Transmute: Titanium' bonus" << "\n";
-    } else if (!ProfitTitanium && SameTitanium && !ProfitTitansteel && SameTitansteel) {
+    } else if (SameTitanium && SameTitansteel) {
       cout << "Comparing both outcome (Titanium : Titansteel) : " << "\n";
-      cout << 0 << "g : " << 0 << "g" << "\n";
+      cout << "0g 00s 00c" << " : " << "0g 00s 00c" << "\n";
       SetColor(10);
       cout << "Looks like selling only TITANIUM BARS is the best choice" << "\n";
       SetColor(7);
